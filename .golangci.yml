@@ -1,0 +1,43 @@
+---
+run:
+    timeout: 3m
+    tests: false
+
+linters-settings:
+    goconst:
+        min-len: 2
+        min-occurrences: 2
+        ignore-tests: true
+    gocyclo:
+        min-complexity: 15
+    godot:
+        check-all: true
+    goimports:
+        local-prefixes: github.com/SevenOfSpades/go-composition-runner
+    revive:
+        confidence: 0.8
+
+linters:
+    enable:
+        - gocritic
+        - gosec
+        - govet
+        - ineffassign
+        - unconvert
+        - gosimple
+        - whitespace
+        - staticcheck
+        - revive
+        - unused
+
+issues:
+    exclude-use-default: false
+    exclude:
+        - exported (function|method|var|type|const) .* should have comment or be unexported
+    exclude-rules:
+        -   linters:
+                - gocritic
+            text: "unnecessaryDefer:"
+        -   linters:
+                - gocritic
+            text: "preferDecodeRune:"
