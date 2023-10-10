@@ -144,11 +144,11 @@ func (r *defaultRunner) Start(ctx context.Context) <-chan error {
 		ready <- struct{}{}
 		close(ready)
 
-		sCtx, sCancel := context.WithTimeout(context.Background(), r.shutdownTimeout)
-		defer sCancel()
-
 		select {
 		case finDTO := <-anyDone:
+			sCtx, sCancel := context.WithTimeout(context.Background(), r.shutdownTimeout)
+			defer sCancel()
+
 			if finDTO.Err != nil {
 				r.debugPrinterFunc(fmt.Sprintf("Runner[%s] started shutdown procedure due to an error in '%s' runnable.", r.name, finDTO.Name))
 			} else {
@@ -161,6 +161,9 @@ func (r *defaultRunner) Start(ctx context.Context) <-chan error {
 
 			r.finishWithTimeout(sCtx, done, finDTO.Err)
 		case <-ctx.Done():
+			sCtx, sCancel := context.WithTimeout(context.Background(), r.shutdownTimeout)
+			defer sCancel()
+
 			r.debugPrinterFunc(fmt.Sprintf("Runner[%s] received shutdown signal from context.", r.name))
 
 			cancel()
