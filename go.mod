@@ -3,7 +3,7 @@ module github.com/SevenOfSpades/go-composition-runner
 go 1.21.2
 
 require (
-	github.com/SevenOfSpades/go-just-options v0.0.3
+	github.com/SevenOfSpades/go-just-options v0.0.4
 	github.com/stretchr/testify v1.8.4
 )
 

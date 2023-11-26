@@ -2,6 +2,8 @@ github.com/SevenOfSpades/go-just-options v0.0.1 h1:JPoQnYCNURYuhknGLj57Z6Zl8thxf
 github.com/SevenOfSpades/go-just-options v0.0.1/go.mod h1:lZq3BZMAOxgoZqa8QRvYX51O7fOqTtDzrnfStfzR6jY=
 github.com/SevenOfSpades/go-just-options v0.0.3 h1:6B/+LeSl2SA74cOq+co/gMK8NaCMxbfVgMyslH8kA/4=
 github.com/SevenOfSpades/go-just-options v0.0.3/go.mod h1:7kKQ11K1g+JdqKwPLLINcLSRn0kfsZV7f5dKhYXWzyk=
+github.com/SevenOfSpades/go-just-options v0.0.4 h1:B2kEUmei7PFTmD7V/a+12dEUWElj9yDrbVWxeClAsl8=
+github.com/SevenOfSpades/go-just-options v0.0.4/go.mod h1:7kKQ11K1g+JdqKwPLLINcLSRn0kfsZV7f5dKhYXWzyk=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

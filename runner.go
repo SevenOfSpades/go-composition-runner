@@ -13,7 +13,7 @@ import (
 // * OptionDebugPrinter - set handler for debug logs (default handler is an empty function).
 // * OptionName - set custom name for Runner ("default" is a default name for Runner).
 func New(opts ...options.Option) (Runner, error) {
-	opt := options.Resolve(opts...)
+	opt := options.Resolve(opts)
 
 	optShutdownTimeout, err := options.ReadOrDefault[time.Duration](opt, optionShutdownTimeout, time.Second*10)
 	if err != nil {
